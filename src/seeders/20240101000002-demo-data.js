@@ -66,24 +66,30 @@ module.exports = {
             { id: catId, businessId: bizId, name: 'Electronics', description: 'Electronic goods', createdAt: now, updatedAt: now },
         ]);
 
+        // Demo Supplier
+        const supplierId = uuidv4();
+        await queryInterface.bulkInsert('Suppliers', [
+            { id: supplierId, businessId: bizId, name: 'TechWholesale Inc', email: 'sales@techwholesale.com', phone: '123-456-7890', address: '1 Supplier Way', contactPerson: 'Bob', createdAt: now, updatedAt: now }
+        ]);
+
         // Demo products
         await queryInterface.bulkInsert('Products', [
             {
-                id: uuidv4(), businessId: bizId, categoryId: catId, supplierId: null,
+                id: uuidv4(), businessId: bizId, categoryId: catId, supplierId: supplierId,
                 name: 'USB-C Cable', sku: 'ELC-001', unit: 'pcs',
                 buyingPrice: 2.50, sellingPrice: 9.99,
                 quantity: 100, reorderLevel: 10,
                 isActive: true, createdAt: now, updatedAt: now,
             },
             {
-                id: uuidv4(), businessId: bizId, categoryId: catId, supplierId: null,
+                id: uuidv4(), businessId: bizId, categoryId: catId, supplierId: supplierId,
                 name: 'Wireless Mouse', sku: 'ELC-002', unit: 'pcs',
                 buyingPrice: 8.00, sellingPrice: 24.99,
                 quantity: 50, reorderLevel: 5,
                 isActive: true, createdAt: now, updatedAt: now,
             },
             {
-                id: uuidv4(), businessId: bizId, categoryId: catId, supplierId: null,
+                id: uuidv4(), businessId: bizId, categoryId: catId, supplierId: supplierId,
                 name: 'HDMI Adapter', sku: 'ELC-003', unit: 'pcs',
                 buyingPrice: 3.00, sellingPrice: 14.99,
                 quantity: 3, reorderLevel: 10, // Low stock intentionally

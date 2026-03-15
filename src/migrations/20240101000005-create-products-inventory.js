@@ -29,9 +29,9 @@ module.exports = {
                 onUpdate: 'CASCADE', onDelete: 'SET NULL',
             },
             supplierId: {
-                type: Sequelize.UUID, allowNull: true,
+                type: Sequelize.UUID, allowNull: false,
                 references: { model: 'Suppliers', key: 'id' },
-                onUpdate: 'CASCADE', onDelete: 'SET NULL',
+                onUpdate: 'CASCADE', onDelete: 'RESTRICT',
             },
             name: { type: Sequelize.STRING(300), allowNull: false },
             description: { type: Sequelize.TEXT },

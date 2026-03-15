@@ -22,13 +22,22 @@ const getDashboard = async (req, res, next) => {
                     include: [{ association: 'customer', attributes: ['id', 'name'] }],
                     attributes: ['id', 'saleNumber', 'total', 'saleDate', 'status', 'paymentMethod'],
                 }),
-                // Low stock count
+                // Low stock count computed dynamically
                 Product.count({
-                    where: {
-                        businessId: bId,
-                        isActive: true,
-                        quantity: { [Op.lte]: literal('`reorderLevel`') },
+                    where: { businessId: bId, isActive: true },
+                    attributes: {
+                        include: [
+                            [
+                                sequelize.literal(`(
+                                    SELECT COALESCE(SUM(CASE WHEN type = 'IN' THEN quantity ELSE -quantity END), 0)
+                                    FROM InventoryTransactions AS it
+                                    WHERE it.productId = Product.id
+                                )`),
+                                'computedQuantity'
+                            ]
+                        ]
                     },
+                    having: sequelize.literal('computedQuantity <= reorderLevel'),
                 }),
                 // Top 5 selling products this month
                 SaleItem.findAll({

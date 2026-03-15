@@ -507,3 +507,359 @@
     at async SaleItem.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
     at async Promise.all (index 4)
     at async getDashboard (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:14:13)
+2026-03-15 16:46:33 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async SaleItem.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 4)
+    at async getDashboard (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:14:13)
+2026-03-15 16:46:34 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async SaleItem.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 4)
+    at async getDashboard (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:14:13)
+2026-03-15 16:46:43 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async SaleItem.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 4)
+    at async getDashboard (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:14:13)
+2026-03-15 16:46:44 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async SaleItem.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 4)
+    at async getDashboard (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:14:13)
+2026-03-15 16:50:43 [info]: ✅  Database connection established successfully.
+2026-03-15 16:50:43 [info]: 🚀  BizPilotAI server running on port 5000 [development]
+2026-03-15 16:50:43 [info]: 📚  API Docs: http://localhost:5000/api/docs
+2026-03-15 16:53:26 [info]: ✅  Database connection established successfully.
+2026-03-15 16:53:26 [info]: 🚀  BizPilotAI server running on port 5000 [development]
+2026-03-15 16:53:26 [info]: 📚  API Docs: http://localhost:5000/api/docs
+2026-03-15 16:54:42 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:42 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:42 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:43 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:43 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:43 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:46 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:46 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:46 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:48 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:48 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:48 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:52 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:54 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:57 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:57 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:58 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:54:58 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:55:01 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:55:03 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:55:05 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:55:07 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:55:08 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:55:09 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:55:13 [info]: ✅  Database connection established successfully.
+2026-03-15 16:55:13 [info]: 🚀  BizPilotAI server running on port 5000 [development]
+2026-03-15 16:55:13 [info]: 📚  API Docs: http://localhost:5000/api/docs
+2026-03-15 16:55:13 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async User.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async User.findOne (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1240:12)
+    at async User.findByPk (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1221:12)
+    at async authenticate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\middleware\authenticate.js:27:22)
+2026-03-15 16:55:26 [info]: ✅  Database connection established successfully.
+2026-03-15 16:55:26 [info]: 🚀  BizPilotAI server running on port 5000 [development]
+2026-03-15 16:55:26 [info]: 📚  API Docs: http://localhost:5000/api/docs
+2026-03-15 16:56:32 [info]: ✅  Database connection established successfully.
+2026-03-15 16:56:32 [info]: 🚀  BizPilotAI server running on port 5000 [development]
+2026-03-15 16:56:32 [info]: 📚  API Docs: http://localhost:5000/api/docs
+2026-03-15 16:59:43 [error]: Error: Refresh token mismatch
+    at Object.refreshTokens (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\auth\auth.service.js:110:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async refresh (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\auth\auth.controller.js:53:24)
+2026-03-15 16:59:51 [info]: ✅  Database connection established successfully.
+2026-03-15 16:59:51 [info]: 🚀  BizPilotAI server running on port 5000 [development]
+2026-03-15 16:59:51 [info]: 📚  API Docs: http://localhost:5000/api/docs
+2026-03-15 17:00:42 [info]: ✅  Database connection established successfully.
+2026-03-15 17:00:42 [info]: 🚀  BizPilotAI server running on port 5000 [development]
+2026-03-15 17:00:42 [info]: 📚  API Docs: http://localhost:5000/api/docs
+2026-03-15 17:00:57 [info]: ✅  Database connection established successfully.
+2026-03-15 17:00:57 [info]: 🚀  BizPilotAI server running on port 5000 [development]
+2026-03-15 17:00:57 [info]: 📚  API Docs: http://localhost:5000/api/docs
+2026-03-15 17:01:55 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.rawSelect (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:434:18)
+    at async Product.aggregate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1277:19)
+    at async Product.count (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1306:20)
+    at async Promise.all (index 3)
+    at async getDashboard (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:14:13)
+2026-03-15 17:01:56 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.rawSelect (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:434:18)
+    at async Product.aggregate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1277:19)
+    at async Product.count (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1306:20)
+    at async Promise.all (index 3)
+    at async getDashboard (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:14:13)
+2026-03-15 17:09:14 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async SaleItem.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async getTopProducts (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:127:24)
+2026-03-15 17:09:15 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async SaleItem.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async getTopProducts (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:127:24)
+2026-03-15 17:09:28 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.rawSelect (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:434:18)
+    at async Product.aggregate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1277:19)
+    at async Product.count (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1306:20)
+    at async Promise.all (index 3)
+    at async getDashboard (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:14:13)
+2026-03-15 17:09:29 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.rawSelect (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:434:18)
+    at async Product.aggregate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1277:19)
+    at async Product.count (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1306:20)
+    at async Promise.all (index 3)
+    at async getDashboard (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:14:13)
+2026-03-15 17:10:08 [info]: ✅  Database connection established successfully.
+2026-03-15 17:10:08 [info]: 🚀  BizPilotAI server running on port 5000 [development]
+2026-03-15 17:10:08 [info]: 📚  API Docs: http://localhost:5000/api/docs
+2026-03-15 17:10:32 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.rawSelect (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:434:18)
+    at async Product.aggregate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1277:19)
+    at async Product.count (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1306:20)
+    at async Promise.all (index 3)
+    at async getDashboard (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:14:13)
+2026-03-15 17:10:33 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.rawSelect (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:434:18)
+    at async Product.aggregate (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1277:19)
+    at async Product.count (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1306:20)
+    at async Promise.all (index 3)
+    at async getDashboard (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:14:13)

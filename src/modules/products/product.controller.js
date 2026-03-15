@@ -13,10 +13,26 @@ const list = async (req, res, next) => {
         if (req.query.categoryId) where.categoryId = req.query.categoryId;
         if (req.query.isActive !== undefined) where.isActive = req.query.isActive === 'true';
         if (req.query.lowStock === 'true') {
+            // Will update this query later if needed
             where.quantity = { [Op.lte]: Op.col('reorderLevel') };
         }
+
+        const { sequelize } = require('../../models');
+
         const { count, rows } = await Product.findAndCountAll({
             where,
+            attributes: {
+                include: [
+                    [
+                        sequelize.literal(`(
+                            SELECT COALESCE(SUM(CASE WHEN type = 'IN' THEN quantity ELSE -quantity END), 0)
+                            FROM InventoryTransactions AS it
+                            WHERE it.productId = Product.id
+                        )`),
+                        'computedQuantity'
+                    ]
+                ]
+            },
             include: [
                 { model: Category, as: 'category', attributes: ['id', 'name'] },
                 { model: Supplier, as: 'supplier', attributes: ['id', 'name'] },
@@ -24,13 +40,42 @@ const list = async (req, res, next) => {
             order: getOrder(req.query.sortBy, req.query.sortDir, 'name'),
             limit, offset,
         });
-        return success(res, { data: rows, meta: paginate({ page, limit, total: count }) });
+
+        // Map the computed quantity to the output
+        const formattedRows = rows.map(r => {
+            const data = r.toJSON();
+            data.quantity = parseFloat(data.computedQuantity) || 0;
+            delete data.computedQuantity;
+            return data;
+        });
+
+        return success(res, { data: formattedRows, meta: paginate({ page, limit, total: count }) });
     } catch (err) { next(err); }
 };
 
 const create = async (req, res, next) => {
     try {
-        const product = await Product.create({ ...req.body, businessId: req.businessId });
+        if (!req.body.supplierId) {
+            return success(res, { statusCode: 400, message: 'supplierId is required to create a product', data: null });
+        }
+        const { quantity, ...productData } = req.body;
+        const product = await Product.create({ ...productData, quantity: quantity || 0, businessId: req.businessId });
+
+        if (quantity && parseFloat(quantity) > 0) {
+            const { InventoryTransaction } = require('../../models');
+            const { INVENTORY_TRANSACTION_TYPE } = require('../../config/constants');
+            await InventoryTransaction.create({
+                businessId: req.businessId,
+                productId: product.id,
+                userId: req.user.id,
+                type: INVENTORY_TRANSACTION_TYPE.IN,
+                quantity: parseFloat(quantity),
+                balanceBefore: 0,
+                balanceAfter: parseFloat(quantity),
+                reason: 'Initial Stock'
+            });
+        }
+
         logActivity({ userId: req.user.id, businessId: req.businessId, action: 'PRODUCT_CREATED', entity: 'Product', entityId: product.id });
         return success(res, { statusCode: 201, message: 'Product created', data: product });
     } catch (err) { next(err); }
@@ -38,15 +83,33 @@ const create = async (req, res, next) => {
 
 const getOne = async (req, res, next) => {
     try {
+        const { sequelize } = require('../../models');
         const product = await Product.findOne({
             where: { id: req.params.id, businessId: req.businessId },
+            attributes: {
+                include: [
+                    [
+                        sequelize.literal(`(
+                            SELECT COALESCE(SUM(CASE WHEN type = 'IN' THEN quantity ELSE -quantity END), 0)
+                            FROM InventoryTransactions AS it
+                            WHERE it.productId = Product.id
+                        )`),
+                        'computedQuantity'
+                    ]
+                ]
+            },
             include: [
                 { model: Category, as: 'category' },
                 { model: Supplier, as: 'supplier' },
             ],
         });
         if (!product) return success(res, { statusCode: 404, message: 'Product not found', data: null });
-        return success(res, { data: product });
+
+        const data = product.toJSON();
+        data.quantity = parseFloat(data.computedQuantity) || 0;
+        delete data.computedQuantity;
+
+        return success(res, { data: data });
     } catch (err) { next(err); }
 };
 
@@ -54,7 +117,45 @@ const update = async (req, res, next) => {
     try {
         const product = await Product.findOne({ where: { id: req.params.id, businessId: req.businessId } });
         if (!product) return success(res, { statusCode: 404, message: 'Product not found', data: null });
-        await product.update(req.body);
+        if (req.body.supplierId === null || req.body.supplierId === '') {
+            return success(res, { statusCode: 400, message: 'supplierId cannot be empty', data: null });
+        }
+
+        const { sequelize, InventoryTransaction } = require('../../models');
+        const { INVENTORY_TRANSACTION_TYPE } = require('../../config/constants');
+
+        // Compute CURRENT dynamic quantity
+        const currentQtyQuery = await InventoryTransaction.findAll({
+            where: { productId: product.id },
+            attributes: [
+                [sequelize.literal(`COALESCE(SUM(CASE WHEN type = 'IN' THEN quantity ELSE -quantity END), 0)`), 'computedQuantity']
+            ],
+            raw: true
+        });
+        const currentQty = currentQtyQuery.length ? parseFloat(currentQtyQuery[0].computedQuantity) : 0;
+
+        const { quantity, ...productData } = req.body;
+        await product.update({ ...productData, quantity: quantity !== undefined ? quantity : product.quantity });
+
+        if (quantity !== undefined) {
+            const newQty = parseFloat(quantity);
+            if (newQty !== currentQty) {
+                const diff = Math.abs(newQty - currentQty);
+                const type = newQty > currentQty ? INVENTORY_TRANSACTION_TYPE.IN : INVENTORY_TRANSACTION_TYPE.OUT;
+
+                await InventoryTransaction.create({
+                    businessId: req.businessId,
+                    productId: product.id,
+                    userId: req.user.id,
+                    type: type,
+                    quantity: diff,
+                    balanceBefore: currentQty,
+                    balanceAfter: newQty,
+                    reason: 'Product Stock Update'
+                });
+            }
+        }
+
         logActivity({ userId: req.user.id, businessId: req.businessId, action: 'PRODUCT_UPDATED', entity: 'Product', entityId: product.id });
         return success(res, { message: 'Product updated', data: product });
     } catch (err) { next(err); }
@@ -76,11 +177,31 @@ const getLowStock = async (req, res, next) => {
             where: {
                 businessId: req.businessId,
                 isActive: true,
-                quantity: { [Op.lte]: sequelize.col('reorderLevel') },
+            },
+            attributes: {
+                include: [
+                    [
+                        sequelize.literal(`(
+                            SELECT COALESCE(SUM(CASE WHEN type = 'IN' THEN quantity ELSE -quantity END), 0)
+                            FROM InventoryTransactions AS it
+                            WHERE it.productId = Product.id
+                        )`),
+                        'computedQuantity'
+                    ]
+                ]
             },
             include: [{ model: Category, as: 'category', attributes: ['id', 'name'] }],
+            having: sequelize.literal('computedQuantity <= reorderLevel'),
         });
-        return success(res, { data: products, meta: { total: products.length } });
+
+        const formattedRows = products.map(r => {
+            const data = r.toJSON();
+            data.quantity = parseFloat(data.computedQuantity) || 0;
+            delete data.computedQuantity;
+            return data;
+        });
+
+        return success(res, { data: formattedRows, meta: { total: formattedRows.length } });
     } catch (err) { next(err); }
 };
 
