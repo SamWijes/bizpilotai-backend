@@ -81,6 +81,51 @@ const create = async (req, res, next) => {
     } catch (err) { next(err); }
 };
 
+const createBulk = async (req, res, next) => {
+    const { sequelize, InventoryTransaction } = require('../../models');
+    const { INVENTORY_TRANSACTION_TYPE } = require('../../config/constants');
+    const t = await sequelize.transaction();
+    try {
+        const { supplierId, products } = req.body;
+        if (!supplierId || !products || !Array.isArray(products) || products.length === 0) {
+            await t.rollback();
+            return success(res, { statusCode: 400, message: 'supplierId and products array are required', data: null });
+        }
+
+        const createdProducts = [];
+        for (const pd of products) {
+            const { quantity, ...productData } = pd;
+            const product = await Product.create({
+                ...productData,
+                supplierId,
+                quantity: quantity || 0,
+                businessId: req.businessId
+            }, { transaction: t });
+
+            if (quantity && parseFloat(quantity) > 0) {
+                await InventoryTransaction.create({
+                    businessId: req.businessId,
+                    productId: product.id,
+                    userId: req.user.id,
+                    type: INVENTORY_TRANSACTION_TYPE.IN,
+                    quantity: parseFloat(quantity),
+                    balanceBefore: 0,
+                    balanceAfter: parseFloat(quantity),
+                    reason: 'Initial Bulk Stock'
+                }, { transaction: t });
+            }
+            createdProducts.push(product);
+        }
+
+        await t.commit();
+        logActivity({ userId: req.user.id, businessId: req.businessId, action: 'PRODUCTS_BULK_CREATED', entity: 'Product', entityId: supplierId });
+        return success(res, { statusCode: 201, message: `${createdProducts.length} products created successfully`, data: createdProducts });
+    } catch (err) {
+        await t.rollback();
+        next(err);
+    }
+};
+
 const getOne = async (req, res, next) => {
     try {
         const { sequelize } = require('../../models');
@@ -219,4 +264,4 @@ const createCategory = async (req, res, next) => {
     } catch (err) { next(err); }
 };
 
-module.exports = { list, create, getOne, update, remove, getLowStock, getCategories, createCategory };
+module.exports = { list, create, createBulk, getOne, update, remove, getLowStock, getCategories, createCategory };

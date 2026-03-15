@@ -827,3 +827,17 @@
     at async Product.count (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1306:20)
     at async Promise.all (index 3)
     at async getDashboard (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:14:13)
+2026-03-15 17:15:29 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async SaleItem.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async getTopProducts (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:127:24)
+2026-03-15 17:15:30 [error]: Error
+    at Query.run (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MySQLQueryInterface.select (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async SaleItem.findAll (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\sequelize\lib\model.js:1140:21)
+    at async getTopProducts (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\reports\report.controller.js:127:24)

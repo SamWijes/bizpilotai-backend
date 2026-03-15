@@ -16,5 +16,6 @@ router.post('/stock-in', c.addStock);
 router.post('/stock-out', c.removeStock);
 router.post('/adjust', c.adjustStock);
 router.get('/transactions', c.getTransactions);
+router.get('/supplier-stats', c.getSupplierStats);
 
 module.exports = router;

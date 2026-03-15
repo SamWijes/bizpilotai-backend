@@ -93,4 +93,68 @@ const getTransactions = async (req, res, next) => {
     } catch (err) { next(err); }
 };
 
-module.exports = { addStock, removeStock, adjustStock, getTransactions };
+const getSupplierStats = async (req, res, next) => {
+    try {
+        const { page, limit, offset } = getPagination(req.query);
+        const { Supplier } = require('../../models');
+
+        const { count, rows } = await Product.findAndCountAll({
+            where: { businessId: req.businessId },
+            attributes: [
+                'id', 'name', 'sku', 'buyingPrice', 'sellingPrice',
+                [
+                    sequelize.literal(`(
+                        SELECT COALESCE(SUM(quantity), 0)
+                        FROM InventoryTransactions AS it
+                        WHERE it.productId = Product.id AND it.type = 'IN'
+                    )`),
+                    'totalIn'
+                ],
+                [
+                    sequelize.literal(`(
+                        SELECT COALESCE(SUM(quantity), 0)
+                        FROM InventoryTransactions AS it
+                        WHERE it.productId = Product.id AND (it.type = 'OUT' OR it.type = 'ADJUSTMENT' AND it.quantity < 0)
+                    )`),
+                    'totalOut' // simplified outgoing quantity, though usually it is explicitly OUT
+                ],
+                [
+                    sequelize.literal(`(
+                        SELECT COALESCE(SUM(CASE WHEN type = 'IN' THEN quantity ELSE -quantity END), 0)
+                        FROM InventoryTransactions AS it
+                        WHERE it.productId = Product.id
+                    )`),
+                    'computedQuantity' // balance
+                ]
+            ],
+            include: [
+                { model: Supplier, as: 'supplier', attributes: ['id', 'name', 'phone'] }
+            ],
+            order: [
+                [{ model: Supplier, as: 'supplier' }, 'name', 'ASC'],
+                ['name', 'ASC']
+            ],
+            limit, offset,
+        });
+
+        // Add additional computed values here (like totalValue)
+        const formattedRows = rows.map(r => {
+            const data = r.toJSON();
+            const totalIn = parseFloat(data.totalIn) || 0;
+            const balance = parseFloat(data.computedQuantity) || 0;
+            const totalOut = totalIn - balance; // Simple deduction for generic OUT/Adjustments
+
+            data.totalIn = totalIn;
+            data.totalOut = totalOut;
+            data.balance = balance;
+            data.totalValue = parseFloat((balance * (parseFloat(data.buyingPrice) || 0)).toFixed(2));
+
+            delete data.computedQuantity;
+            return data;
+        });
+
+        return success(res, { data: formattedRows, meta: paginate({ page, limit, total: count }) });
+    } catch (err) { next(err); }
+};
+
+module.exports = { addStock, removeStock, adjustStock, getTransactions, getSupplierStats };
