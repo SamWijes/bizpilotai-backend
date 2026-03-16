@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Prerequisites
 - **Node.js** ≥ 18.0.0
@@ -75,7 +75,7 @@ Server runs at: **http://localhost:5000**
 
 ---
 
-## 📚 API Documentation
+## API Documentation
 
 Swagger UI is available at: **http://localhost:5000/api/docs**
 
@@ -83,75 +83,9 @@ All routes are versioned under `/api/v1`.
 
 ---
 
-## 📁 Folder Structure
-
-```
-backend/
-├── server.js               # Entry point
-├── .env.example            # Environment template
-├── .sequelizerc            # Sequelize CLI config
-├── package.json
-└── src/
-    ├── app.js              # Express app setup
-    ├── config/
-    │   ├── database.js     # Sequelize config (dev/test/prod)
-    │   ├── constants.js    # App-wide enums and constants
-    │   └── swagger.js      # Swagger/OpenAPI spec
-    ├── models/
-    │   ├── index.js        # Model registry + associations
-    │   ├── SubscriptionPlan.js
-    │   ├── Business.js
-    │   ├── User.js
-    │   ├── Customer.js
-    │   ├── Supplier.js
-    │   ├── Category.js
-    │   ├── Product.js
-    │   ├── InventoryTransaction.js
-    │   ├── Sale.js
-    │   ├── SaleItem.js
-    │   ├── Invoice.js
-    │   ├── Expense.js
-    │   ├── Income.js
-    │   ├── AiUsageLog.js
-    │   └── ActivityLog.js
-    ├── migrations/         # Sequelize migrations (ordered)
-    ├── seeders/            # Seed data
-    ├── middleware/
-    │   ├── authenticate.js # JWT verification
-    │   ├── authorize.js    # Role-based + scopeBusiness
-    │   ├── errorHandler.js # Centralized error handling
-    │   ├── rateLimiter.js  # Global/AI/Auth limiters
-    │   └── validate.js     # Joi validation factory
-    ├── validators/
-    │   └── auth.validator.js
-    ├── modules/
-    │   ├── auth/           # Register, Login, Refresh, Profile
-    │   ├── business/       # Business profile and settings
-    │   ├── users/          # Staff user management
-    │   ├── customers/      # Customer CRUD
-    │   ├── suppliers/      # Supplier CRUD
-    │   ├── products/       # Product + Category CRUD
-    │   ├── inventory/      # Stock-in, out, adjust, logs
-    │   ├── sales/          # Sale creation (ACID transaction)
-    │   ├── invoices/       # Invoice + PDF download
-    │   ├── expenses/       # Expenses + Income CRUD
-    │   ├── reports/        # Dashboard + analytics
-    │   ├── ai/             # OpenAI integrations
-    │   └── admin/          # Platform admin panel
-    ├── routes/
-    │   └── index.js        # Main router aggregator
-    └── utils/
-        ├── logger.js       # Winston daily rotate logger
-        ├── response.js     # Standard JSON response helpers
-        ├── pagination.js   # Pagination + sort helpers
-        ├── activityLogger.js # Fire-and-forget audit log
-        ├── numberGenerator.js # Sale/Invoice number gen
-        └── pdfGenerator.js # PDFKit invoice PDF streamer
-```
-
 ---
 
-## 🔐 Authentication Flow
+##  Authentication Flow
 
 1. `POST /api/v1/auth/register` — create business + owner
 2. `POST /api/v1/auth/login` — returns `accessToken` (1h) + `refreshToken` (7d)
@@ -161,7 +95,7 @@ backend/
 
 ---
 
-## 🤖 AI Endpoints
+## AI Endpoints
 
 All AI endpoints require authentication and are rate-limited to **10 req/min** per IP.
 
@@ -177,7 +111,7 @@ Request body: `{ "prompt": "Your question here" }`
 
 ---
 
-## 🧾 PDF Invoice Download
+##  PDF Invoice Download
 
 ```
 GET /api/v1/invoices/:id/pdf
@@ -188,7 +122,7 @@ Streams a professional A4 PDF directly — no disk storage needed.
 
 ---
 
-## 🔗 API Base Routes
+##  API Base Routes
 
 | Module | Route |
 |---|---|
@@ -208,7 +142,7 @@ Streams a professional A4 PDF directly — no disk storage needed.
 
 ---
 
-## 🛠️ Scripts
+##  Scripts
 
 | Command | Description |
 |---|---|
@@ -221,7 +155,7 @@ Streams a professional A4 PDF directly — no disk storage needed.
 
 ---
 
-## 🔒 Security Features
+## Security Features
 
 - **Helmet** — sets secure HTTP headers
 - **CORS** — whitelist-based origin control
@@ -234,7 +168,7 @@ Streams a professional A4 PDF directly — no disk storage needed.
 
 ---
 
-## ☁️ Production Deployment (AWS EC2)
+##  Production Deployment (AWS EC2)
 
 See the deployment guide in `DEPLOYMENT.md` (Phase 6).
 
