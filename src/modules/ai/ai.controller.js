@@ -2,7 +2,7 @@
 const aiService = require('./ai.service');
 const { Sale, SaleItem, Product, Expense } = require('../../models');
 const { success, error } = require('../../utils/response');
-const { Op, fn, col } = require('sequelize');
+const { Op, fn, col, where } = require('sequelize');
 
 /** Helper: build a compact business context string for AI prompts */
 const buildContext = async (businessId) => {
@@ -11,7 +11,15 @@ const buildContext = async (businessId) => {
 
     const [monthlySales, lowStock, recentSales] = await Promise.all([
         Sale.sum('total', { where: { businessId, saleDate: { [Op.gte]: monthStart }, status: 'COMPLETED' } }),
-        Product.count({ where: { businessId, isActive: true, quantity: { [Op.lte]: fn('reorderLevel') } } }),
+        Product.count({
+            where: {
+                businessId,
+                isActive: true,
+                [Op.and]: [
+                    where(col('quantity'), '<=', col('reorderLevel'))
+                ]
+            }
+        }),
         Sale.findAll({ where: { businessId, status: 'COMPLETED' }, order: [['saleDate', 'DESC']], limit: 3, attributes: ['saleDate', 'total'] }),
     ]);
 

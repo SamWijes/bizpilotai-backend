@@ -12,7 +12,7 @@ const options = {
         },
         servers: [
             { url: 'http://localhost:5000/api/v1', description: 'Development server' },
-            { url: 'https://api.bizpilotai.com/api/v1', description: 'Production server' },
+            { url: 'https://bizpilot.samithwijesekara.me/api/v1', description: 'Production server' },
         ],
         components: {
             securitySchemes: {
