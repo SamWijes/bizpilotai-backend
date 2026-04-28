@@ -30,6 +30,7 @@ const User = require('./User')(sequelize);
 const Customer = require('./Customer')(sequelize);
 const Supplier = require('./Supplier')(sequelize);
 const Category = require('./Category')(sequelize);
+const Item = require('./Item')(sequelize);
 const Product = require('./Product')(sequelize);
 const InventoryTransaction = require('./InventoryTransaction')(sequelize);
 const Sale = require('./Sale')(sequelize);
@@ -47,6 +48,7 @@ const models = {
     Customer,
     Supplier,
     Category,
+    Item,
     Product,
     InventoryTransaction,
     Sale,

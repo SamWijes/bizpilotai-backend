@@ -28,7 +28,7 @@ module.exports = (sequelize) => {
             },
             supplierId: {
                 type: DataTypes.UUID,
-                allowNull: true,
+                allowNull: false,
                 references: { model: 'Suppliers', key: 'id' },
             },
             name: { type: DataTypes.STRING(300), allowNull: false },

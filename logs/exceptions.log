@@ -1,0 +1,18 @@
+2026-03-15 17:40:55 [error]: Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\express\lib\router\route.js:216:15)
+    at proto.<computed> [as post] (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\modules\products\product.routes.js:11:8)
+    at Module._compile (node:internal/modules/cjs/loader:1804:14)
+    at Object..js (node:internal/modules/cjs/loader:1936:10)
+    at Module.load (node:internal/modules/cjs/loader:1525:32)
+    at Module._load (node:internal/modules/cjs/loader:1327:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1548:12)
+2026-04-27 22:15:47 [error]: Error: listen EACCES: permission denied 0.0.0.0:5000
+    at Server.setupListenHandle [as _listen2] (node:net:1918:21)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at app.listen (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\express\lib\application.js:635:24)
+    at startServer (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\server.js:16:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
