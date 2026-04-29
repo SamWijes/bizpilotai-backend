@@ -15,7 +15,7 @@ const swaggerSpec = require('./config/swagger');
 const apiRouter = require('./routes');
 
 const app = express();
-
+app.set('trust proxy', 1);
 // ─────────────────────────────────────────────
 // Security middleware
 // ─────────────────────────────────────────────
