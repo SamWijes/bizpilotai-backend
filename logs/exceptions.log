@@ -16,3 +16,24 @@
     at app.listen (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\node_modules\express\lib\application.js:635:24)
     at startServer (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\server.js:16:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+2026-04-29 06:26:11 [error]: C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\config\database.js:51
+             process.env.DB_SSL === 'true'
+                    ^
+
+SyntaxError: Unexpected token '.'
+    at wrapSafe (node:internal/modules/cjs/loader:1735:18)
+    at Module._compile (node:internal/modules/cjs/loader:1778:20)
+    at Object..js (node:internal/modules/cjs/loader:1936:10)
+    at Module.load (node:internal/modules/cjs/loader:1525:32)
+    at Module._load (node:internal/modules/cjs/loader:1327:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1548:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\src\models\index.js:4:18)
+2026-04-29 06:37:04 [error]: ReferenceError: API_BASE_URL is not defined
+    at Server.<anonymous> (C:\Users\samit\Documents\CODE\ACPT\BizPilotAI\backend\server.js:19:32)
+    at Object.onceWrapper (node:events:622:28)
+    at Server.emit (node:events:520:35)
+    at emitListeningNT (node:net:1983:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:88:21)

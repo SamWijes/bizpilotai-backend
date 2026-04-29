@@ -15,7 +15,10 @@ async function startServer() {
         // Start HTTP server
         app.listen(PORT, () => {
             logger.info(` BizPilotAI server running on port ${PORT} [${process.env.NODE_ENV}]`);
-            logger.info(` API Docs: http://localhost:${PORT}/api/docs`);
+            logger.info(`${process.env.NODE_ENV==='production'
+                ? ` API Docs: ${process.env.API_BASE_URL}/api/docs`
+                : ` API Docs: http://localhost:${PORT}/api/docs`} 
+                `);
         });
     } catch (err) {
         logger.error('Unable to connect to database:', err);

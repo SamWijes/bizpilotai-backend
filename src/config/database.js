@@ -47,10 +47,15 @@ module.exports = {
             acquire: 30000,
             idle: 10000,
         },
-        dialectOptions: {
-            ssl: {
-                rejectUnauthorized: true,
-            },
-        },
+        dialectOptions:  
+        process.env.DB_SSL === 'true'
+            ? {
+                  ssl: {
+                      require: true,
+                      rejectUnauthorized:
+                      process.env.DB_SSL_REJECT_UNAUTHORIZED !== 'false',
+                  },
+              }
+            : {},
     },
 };
